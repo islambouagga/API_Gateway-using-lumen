@@ -2,6 +2,8 @@
 /.idea
 Homestead.json
 Homestead.yaml
-.env
+
 .phpunit.result.cache
 database/database.sqlite
+storage/*.key
+.rnd
