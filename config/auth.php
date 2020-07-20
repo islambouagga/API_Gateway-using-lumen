@@ -35,7 +35,10 @@ return [
     */
 
     'guards' => [
-        'api' => ['driver' => 'passport'],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
     ],
 
     /*
@@ -55,10 +58,13 @@ return [
     |
     */
 
-    'providers' => [
-        //
-    ],
 
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+    ],
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
